@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Happy Birthday BeulahTheBest – Here is a small present for you</title>
+
+<meta property="og:title" content="Happy Birthday BeulahTheBest – Here is a small present for you">
+<meta name="description" content="A small surprise waiting for you 💜">
+
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Patrick Hand',cursive;
+text-align:center;
+overflow-x:hidden;
+
+background: linear-gradient(-45deg,#ff9a9e,#fad0c4,#a18cd1,#fbc2eb,#f6d365);
+background-size:400% 400%;
+animation:gradient 12s ease infinite;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.page{display:none;padding:30px 20px;}
+.active{display:block;animation:fade 1s;}
+
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
+}
+
+img{
+width:72%;
+max-width:850px;
+height:auto;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
+margin:20px auto;
+display:block;
+}
+
+h1{font-size:60px;margin:10px;}
+h2{font-size:42px;}
+p{font-size:26px;line-height:1.6;}
+
+button{
+padding:14px 28px;
+font-size:20px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+margin:10px;
+font-family:'Patrick Hand',cursive;
+background:white;
+}
+
+.next{margin-top:25px;}
+
+.black{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+opacity:0;
+transition:opacity 1s;
+pointer-events:none;
+}
+
+.showblack{opacity:1;}
+
+.butterfly{
+position:fixed;
+font-size:26px;
+animation:fly 18s linear infinite;
+z-index:5;
+}
+
+@keyframes fly{
+from{transform:translateX(-10vw) translateY(10vh)}
+to{transform:translateX(110vw) translateY(-20vh)}
+}
+
+.sparkle{
+position:fixed;
+width:6px;
+height:6px;
+background:white;
+border-radius:50%;
+opacity:0.7;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:0.2}
+50%{opacity:1}
+}
+
+.confetti{
+position:fixed;
+width:8px;
+height:8px;
+top:-10px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{transform:translateY(100vh) rotate(360deg);}
+}
+
+/* slide text animation */
+
+.slideText{
+opacity:0;
+transform:translateY(30px);
+animation:slideUp 1.5s forwards;
+}
+
+@keyframes slideUp{
+to{opacity:1;transform:translateY(0);}
+}
+
+/* handwriting animation */
+
+.handwriting{
+overflow:hidden;
+white-space:nowrap;
+border-right:3px solid black;
+width:0;
+margin:auto;
+animation:typing 6s steps(90,end) forwards, blink .8s infinite;
+}
+
+@keyframes typing{
+from{width:0}
+to{width:100%}
+}
+
+@keyframes blink{
+0%{border-color:transparent}
+50%{border-color:black}
+100%{border-color:transparent}
+}
+
+/* final image hidden initially */
+
+#finalImage{
+opacity:0;
+transition:opacity 2s;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="black" class="black"></div>
+
+<div id="page0" class="page active">
+
+<h1>Hey Auntyy...</h1>
+<div style="font-size:28px">A small present for you ✨</div>
+
+<p>Before you enter, answer this one little question.</p>
+<p>What is the nickname I mostly use and like to call you?</p>
+
+<button onclick="wrong()">Aunty</button>
+<button onclick="correct()">Gundamma</button>
+
+<p id="feedback"></p>
+
+</div>
+
+<div id="page1" class="page">
+
+<img src="1.png">
+
+<p class="slideText">
+A small caterpillar turns into a beautifully grown butterfly 🦋
+</p>
+
+<button class="next" onclick="next(2)">Next</button>
+
+</div>
+
+<div id="page2" class="page">
+
+<img src="2.png">
+
+<p class="slideText">
+I may not have been there with you in your journey.<br><br>
+But I've listened to your story.<br><br>
+I've seen the way you've grown through your eyes.
+</p>
+
+<button class="next" onclick="next(3)">Next</button>
+
+</div>
+
+<div id="page3" class="page">
+
+<img src="3.png">
+
+<p class="slideText">
+Watching you become who you are today makes me wonder who shaped you like this 🤔
+</p>
+
+<button class="next" onclick="next(4)">Next</button>
+
+</div>
+
+<div id="page4" class="page">
+
+<img src="4.png">
+
+<p class="slideText">
+I think I know who I should thank first!<br><br>
+It's your Mom:<br><br>
+Because she brought my Gundamma into this world.<br>
+And now my world feels better because of her.
+</p>
+
+<button class="next" onclick="next(5)">Next</button>
+
+</div>
+
+<div id="page5" class="page">
+
+<img src="5.png">
+
+<p class="slideText">
+And your dad too...<br><br>
+For raising you with discipline, strength, kindness and the positive attitude which you carry today.<br><br>
+Honestly, I've never seen someone as disciplined as you.<br>
+And that's one of the many reasons I admire you.
+</p>
+
+<button class="next" onclick="next(6)">Next</button>
+
+</div>
+
+<div id="page6" class="page">
+
+<img src="6.png">
+
+<p class="slideText">
+Sometimes I feel like I should thank God or the universe for crossing our path by just sharing the simple Pista Milk.<br><br>
+Maybe it was destiny...<br>
+I don't know...<br><br>
+But I am glad it happened.
+</p>
+
+<button class="next" onclick="next(7)">Next</button>
+
+</div>
+
+<div id="page7" class="page">
+
+<p class="slideText">
+But above all...<br><br>
+I should thank you...<br><br>
+For being my Bestest Friend in my life<br>
+For bringing light in my darkest days<br>
+For making efforts to talk with me and bearing with my torture daily<br><br>
+Even when I hurt you sometimes with my words or actions<br><br>
+And yet... You still chose to stay<br><br>
+Thanks for staying.
+</p>
+
+<button class="next" onclick="next(8)">Next</button>
+
+</div>
+
+<div id="page8" class="page">
+
+<p class="handwriting">
+
+Dear Beulah...<br><br>
+
+You are the gentle breeze I always want to feel again<br>
+You are one of my favourite memories I always wish to relive<br>
+You are a Gem 💎 I never want to lose<br><br>
+
+You are the Butterfly 🦋 I never want to cage,<br>
+But I'll always admire how you rise higher,<br>
+Reaching new heights.<br><br>
+
+And I'll be there, cheering my butterfly to touch the sky.
+
+</p>
+
+<button class="next" onclick="next(9)">Next</button>
+
+</div>
+
+<div id="page9" class="page">
+
+<h1>Happy Birthday</h1>
+
+<h2>My Once in a Lifetime Person ❤️</h2>
+
+<p style="font-size:28px;margin-top:20px;">
+Thanks for existing in my life
+</p>
+
+<img src="7.png" id="finalImage">
+
+</div>
+
+<audio id="music" preload="auto">
+<source src="until-i-found-you.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function wrong(){
+document.getElementById("feedback").innerText="Chii...Try again";
+}
+
+function correct(){
+
+document.getElementById("feedback").innerText="Here We Go!!!";
+
+const m=document.getElementById("music");
+m.currentTime=0;
+m.play().catch(()=>{});
+
+let b=document.getElementById("black");
+b.classList.add("showblack");
+
+setTimeout(()=>{
+next(1);
+b.classList.remove("showblack");
+},1200);
+
+}
+
+function next(n){
+
+let pages=document.querySelectorAll(".page");
+pages.forEach(p=>p.classList.remove("active"));
+
+document.getElementById("page"+n).classList.add("active");
+
+if(n===9){
+
+confetti();
+
+setTimeout(()=>{
+document.getElementById("finalImage").style.opacity="1";
+},3000);
+
+}
+
+}
+
+function confetti(){
+
+for(let i=0;i<120;i++){
+
+let c=document.createElement("div");
+c.className="confetti";
+c.style.left=Math.random()*100+"vw";
+c.style.background=["red","yellow","blue","green","pink"][Math.floor(Math.random()*5)];
+c.style.animationDuration=(3+Math.random()*3)+"s";
+
+document.body.appendChild(c);
+
+}
+
+}
+
+for(let i=0;i<6;i++){
+
+let b=document.createElement("div");
+b.className="butterfly";
+b.innerHTML="🦋";
+b.style.top=Math.random()*80+"vh";
+b.style.animationDuration=(12+Math.random()*8)+"s";
+
+document.body.appendChild(b);
+
+}
+
+for(let i=0;i<20;i++){
+
+let s=document.createElement("div");
+s.className="sparkle";
+s.style.left=Math.random()*100+"vw";
+s.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(s);
+
+}
+
+</script>
+
+</body>
+</html>
