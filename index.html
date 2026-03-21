@@ -352,6 +352,9 @@ pages.forEach(p=>p.classList.remove("active"));
 
 document.getElementById("page"+n).classList.add("active");
 
+/* Open each new page from the top */
+window.scrollTo(0, 0);
+
 if(n===9){
 
 confetti();
